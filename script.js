@@ -35,7 +35,7 @@ document.querySelector('.house').addEventListener('mouseenter', function() {
         // Tạo phần tử cho nhân vật
         const character = document.createElement('img');
         character.id = 'anime-character';
-        character.src = '/public/anime_character.png';
+        character.src = './anime_character.png';
 
         // Tạo bong bóng chat
         const chatBubble = document.createElement('div');
@@ -74,7 +74,7 @@ document.querySelector('.house').addEventListener('click', function() {
 
         // Thêm ảnh trong nhà
         const interiorImage = document.createElement('img');
-        interiorImage.src = '/public/in-house.jpg';
+        interiorImage.src = './in-house.jpg';
         interiorImage.alt = 'House Interior';
 
         const inHouseContainer3D = document.createElement('div');
@@ -93,17 +93,17 @@ document.querySelector('.house').addEventListener('click', function() {
         const gifts = [{
                 title: "Món quà đặc biệt",
                 description: "Một bữa ăn ở bất kỳ 🍽",
-                image: "/public/food.png"
+                image: "./food.png"
             },
             {
                 title: "Món quà may mắn",
                 description: "Một cây son bất kỳ 💄",
-                image: "/public/son.png"
+                image: "./son.png"
             },
             {
                 title: "Món quà bí ẩn",
                 description: "Một blind box 🎁",
-                image: "/public/bb3.png"
+                image: "./bb3.png"
             },
             // Thêm các phần quà khác...
         ];
@@ -139,7 +139,7 @@ document.querySelector('.house').addEventListener('click', function() {
             let gift;
             let mixer;
 
-            loader.load('/public/gift.glb',
+            loader.load('./gift.glb',
                 function(gltf) {
                     gift = gltf.scene;
                     gift.scale.set(1, 0.5, 0.5);
@@ -254,7 +254,7 @@ document.querySelector('.house').addEventListener('click', function() {
         let tree;
         let mixer;
         const loader = new GLTFLoader();
-        loader.load('/public/christmas_tree.glb',
+        loader.load('./christmas_tree.glb',
             function(gltf) {
                 tree = gltf.scene;
 
@@ -326,7 +326,7 @@ const scene = new THREE.Scene();
 let santa;
 let mixer;
 const loader = new GLTFLoader();
-loader.load('/public/santa.glb',
+loader.load('./santa.glb',
     function(gltf) {
         santa = gltf.scene;
         scene.add(santa);
